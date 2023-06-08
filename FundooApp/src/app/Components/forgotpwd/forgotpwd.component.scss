@@ -1,0 +1,44 @@
+.gltxt{
+    padding-bottom: 1px;
+    padding-top: 7px;
+    color: #202124;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+}
+.inputtxt{
+    border-radius: 4px;
+    color: #202124;
+    font-size: 16px;
+    height: 28px;
+    margin: 1px 1px 0 1px;
+    padding: 13px 15px;
+    z-index: 1;
+    width: 366px;
+    margin-left: 20px;
+    border-color: #202124;
+}
+.btn{
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    text-align: left;
+    margin: -2px -3px;
+    padding: 2px 3px;
+    border: 0;
+}
+.loginbx{
+    height: 500px;
+     width:448px;
+      border: solid 0.1px rgb(202, 194, 194);
+       border-radius: 8px;
+        padding: 40px 40px;text-align: center;
+}

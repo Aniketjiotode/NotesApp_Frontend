@@ -1,0 +1,27 @@
+.regbx{
+    height: 605px;
+    width: 748px;
+    border: solid black;
+    padding-top: 48px;
+    padding-left: 36px;
+    padding-right: 36px;
+    border: solid 0.1px rgb(202, 194, 194);
+    border-radius: 8px;
+
+}
+.btn{
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    text-align: left;
+    margin: -2px -3px;
+    padding: 2px 3px;
+    border: 0;
+}

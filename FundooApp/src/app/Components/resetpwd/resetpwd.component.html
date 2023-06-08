@@ -1,0 +1,28 @@
+<body fxLayout="row" fxLayoutAlign="center center">
+
+    <div class="loginbx">
+        <div><img src="../../../assets/google-logo-9834.png" style="height:24px;width:74px;" alt=""></div>
+        <h1 style="padding-top:16px;margin:0px ;"><span>Reset Your Password</span></h1>
+        <div class="gltxt"><span>Set your new password</span></div>
+        <form [formGroup]="resetform" (ngSubmit)="resetsubmit()" >
+
+            <div style="height:200px; padding-top:24px ;">
+                <div style="text-align:start;">
+                    <mat-form-field appearance="outline" class="inputtxt">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="password" type="password" formControlName="password">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="inputtxt" style="margin-top:20px;">
+                        <mat-label>Confirm</mat-label>
+                        <input matInput placeholder="Confirm" type="password" formControlName="confirm">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div style=" margin-left: 20px; width: 400px;" fxLayout="row"
+                fxLayoutAlign="end">
+                <button mat-raised-button color="primary"
+                    style="background-color:#1a73e8; width:82px; letter-spacing: .25px;" type="submit">Next</button>
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,64 @@
+<body fxLayout="row"  fxLayoutAlign="center center">
+    <div class="regbx" fxLayout="row" >
+        <div style="width: 434px;height: 400px;">
+            <div>
+                <img src="../../../assets/google-logo-9834.png" style="height:26px;width: 77px;"/>
+            </div>
+            <h1 style="padding-top:10px;"><span>Create your Google Account</span></h1>
+            <form [formGroup]="registerform" (ngSubmit)="registersubmit()">
+            <div style=" padding-top: 10px;">
+                <div  fxLayout="row" >
+                 <mat-form-field appearance="outline">
+                     <mat-label>First name</mat-label>
+                     <input matInput formControlName="fname">
+                     <mat-error *ngIf="registerform.get('fname')?.hasError('required')">Please your name</mat-error>
+
+                   </mat-form-field> 
+                    <mat-form-field appearance="outline" style="margin-left: 15px;">
+                     <mat-label>Last name</mat-label>
+                     <mat-error *ngIf="registerform.get('lname')?.hasError('required')">Please your last name</mat-error>
+                     <input matInput formControlName="lname">
+                   </mat-form-field>
+                 </div>
+                 <div >
+                     <mat-form-field appearance="outline" style="width: 420px; padding: 0px;">
+                         <mat-label>Email address</mat-label>
+                         <input matInput formControlName="email">
+                         <mat-error *ngIf="registerform.get('email')?.hasError">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <span style="color:#5f6368; margin-left: 10px;">
+                     You can use letters, numbers & periods
+                    </span>
+                    <div  fxLayout="row" style="margin-top: 20px;" >
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" formControlName="password">
+                            <mat-error *ngIf="registerform.get('password')?.hasError('required')">Please your password</mat-error>
+                          </mat-form-field> 
+                           <mat-form-field appearance="outline" style="margin-left: 15px;">
+                            <mat-label>Confirm</mat-label>
+                            <input matInput type="password" formControlName="confirm">
+                            <mat-error *ngIf="registerform.get('confirm')?.hasError('required')">Please your password</mat-error>
+
+                          </mat-form-field>
+                        </div>
+
+                        <div style=" margin-top: 40px; margin-left: 2px; width: 400px;" fxLayout="row"  fxLayoutAlign="space-between" >
+
+                            <button type="button" class="btn" style="font-weight: bold; font-size:16px;">Sign in instead</button>           
+                                <button mat-raised-button color="primary" type="submit" style="background-color:#1a73e8; width:82px; letter-spacing: .25px;">Next</button>
+                          </div>
+
+            </div>
+                   </form>
+        </div>
+        <div style="width: 300px; height: 400px; padding-left: 25px;" fxLayout="column"  fxLayoutAlign="center"> 
+            <div>
+                <img src="../../../assets/account.svg" alt=""> 
+            </div>
+            <div><figcaption style="font-size: 16px; font-weight: 300; margin-left: 25px;">One account. All of Google </figcaption>  </div>     
+          <div style="margin-left: 40px;"><figcaption style="font-size: 16px; font-weight: 300; margin-left: 25px;">working for you </figcaption></div>       
+        </div>
+    </div>
+</body>

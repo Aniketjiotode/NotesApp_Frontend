@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<body>
+    <nav>
+        <mat-toolbar class="navbar">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+        <div style="display: flex; align-items: center;margin-left: 10px;"><img src="../../../assets/keep_2020q4_48dp.png" style="width: 44px;height: 44px;"><span class="icontxt">Keep</span></div>
+        <form class="searchbar" >
+            <button style="background: none;border: none; margin-left: 10px;"><span class="material-symbols-outlined">
+                search
+                </span></button>
+            <input placeholder="search"/>
+        </form>
+        <!-- <mat-form-field appearance="outline">
+            <input matInput placeholder="search">
+          </mat-form-field> -->
+          <button style="background: none;border: none; height: 48px;width: 48px;margin-right: 10px;"><span class="material-symbols-outlined" style="font-size: 30px;">
+            refresh
+            </span></button>
+            <button style="background: none;border: none; height: 48px;width: 48px; margin-right: 10px;"><span class="material-symbols-outlined" style="font-size: 30px;">
+                dns
+            </span></button>
+            <button style="background: none;border: none; height: 48px;width: 48px; margin-right: 80px;"><span class="material-symbols-outlined" style="font-size: 30px;">
+                settings
+            </span></button>
+        
+      </mat-toolbar>
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav  mode="side">
+            <mat-nav-list>
+                <a mat-list-item routerLink="/homepage/note"><span class="material-symbols-outlined">
+                    lightbulb
+                    </span> <span class="sideicon">Notes</span></a>
+                <a mat-list-item><span class="material-symbols-outlined">
+                        notifications
+                    </span>
+                     <span  class="sideicon">Remainder</span>
+                    </a>
+                <a mat-list-item><span class="material-symbols-outlined">
+                    edit
+                    </span> <span  class="sideicon" >Edit labels</span></a>
+                <a mat-list-item><span class="material-symbols-outlined">
+                    archive
+                    </span> <span  class="sideicon">Archive</span></a>
+                <a mat-list-item  routerLink="/homepage/trash"><span class="material-symbols-outlined">
+                    delete
+                    </span> <span  class="sideicon">Trash</span>
+                </a>
+               
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="height: 88vh; background-color: white;">
+    
+                    <router-outlet></router-outlet>
+                
+            </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+      </nav>
+     
+</body>

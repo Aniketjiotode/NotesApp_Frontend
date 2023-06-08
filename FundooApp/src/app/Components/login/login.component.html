@@ -1,0 +1,39 @@
+
+<body fxLayout="row"  fxLayoutAlign="center center">
+    
+    <div class="loginbx" >
+        <div><img src="../../../assets/google-logo-9834.png" style="height:24px;width:74px;" alt=""></div> 
+        <h1 style="padding-top:16px;margin:0px ;"><span>Sign in</span></h1>
+        <div class="gltxt"><span>Use your Google Account</span></div>
+        <form [formGroup]="loginform" (ngSubmit)="loginsubmit()" >
+
+        <div style="height:304px; padding-top:24px ;">
+         <div style="text-align:start;">
+            <mat-form-field appearance="outline" class="inputtxt">
+                <mat-label>Email or Phone</mat-label>
+                <input matInput placeholder="Email or phone" formControlName="email">
+                <mat-error *ngIf="loginform.get('email')?.hasError">{{getErrorMessage()}}</mat-error>
+                <!-- <mat-error *ngIf="loginform.get('email')?.hasError('required')">Email is required</mat-error> -->
+            </mat-form-field>
+              </div>
+            <div style="text-align:start;margin-top:15px ;">
+             <mat-form-field appearance="outline" class="inputtxt">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" formControlName="pAssword">
+                <mat-error *ngIf="loginform.get('pAssword')?.hasError">{{pwdErrorMessage()}}</mat-error>
+            </mat-form-field>         
+            <div style="margin-left: 270px; padding-top: 20px;">
+                <button type="button" class="btn" routerLink="/forgot" >Forgot password?</button>
+            </div>
+      </div>
+            
+              <div style=" margin-top: 40px; margin-left: 20px; width: 400px;" fxLayout="row"  fxLayoutAlign="space-between" >
+
+                <button type="button" class="btn" style="font-weight: bold; font-size:16px;">Create account</button>           
+                    <button mat-raised-button color="primary" style="background-color:#1a73e8; width:82px; letter-spacing: .25px;" type="submit">Next</button>
+              </div>
+        </div>
+    </form>
+    </div>
+</body> 
+

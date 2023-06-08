@@ -1,0 +1,11 @@
+<div *ngFor="let notes of notelist" class="notecard">
+    <mat-card class="example-card">
+        <mat-card-title (click)="editnote(notes)">{{notes.title}}</mat-card-title>
+        <mat-card-content (click)="editnote(notes)">
+            <p>{{notes.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <app-icon [notedata]='notes'></app-icon>
+        </mat-card-actions>
+    </mat-card>
+</div>

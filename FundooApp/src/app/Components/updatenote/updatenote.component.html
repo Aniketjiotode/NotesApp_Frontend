@@ -1,0 +1,15 @@
+<div>
+    <mat-card class="example-card">
+        <mat-card-title >
+            <p [(ngModel)]="title"></p>
+            <input matInput [(ngModel)]="title" class="titleinput">
+        </mat-card-title>
+        <mat-card-content >
+            <input matInput [(ngModel)]="description" class="descpinput">
+        </mat-card-content>
+        <mat-card-actions style="display: flex; justify-content: space-between;">
+            <app-icon></app-icon>
+            <button mat-icon-button (click)="closedialog()" style="font-size:18px; margin-left: 10px;">close</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
